@@ -32,12 +32,29 @@
 
 <hr>
 
-<ul>
-  <% @list_of_boards.each do |a_board| %>
-    <li>
-      <a href="/boards/<%= a_board.id %>">
-        <%= a_board.name %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+
+  
+    <div class="card" style="width: 18rem;">
+  <div class="card-header">
+    All Boards
+    <button type="button" class="ms-auto btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#newBoardModal">
+          Add a new board
+        </button>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @list_of_boards.each do |a_board| %>
+    <a href="/boards/<%= a_board.id %> class="list-group-item">
+     <%= a_board.name %>
+        
+           <i class="ms-auto fa-solid fa-chevron-right"></i>
+        
+    </a>
+     <% end %> 
+  </ul>
+ 
+</div>
+           
+         
+            
+    
